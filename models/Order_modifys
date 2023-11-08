@@ -1,0 +1,31 @@
+// 订单修改记录表
+const Sequelize = require("sequelize");
+const db = require("../database/db");
+
+module.exports = db.sequelize.define('order_modifys',{
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncreament: true
+  },name: {
+    type: Sequelize.STRING
+  },
+  number: {
+    type: Sequelize.STRING
+  },
+  time: {
+    type: Sequelize.STRING
+  },
+  modify: {
+    type: Sequelize.STRING
+  },
+  uid: {
+    type: Sequelize.INTEGER
+  }
+},{
+  timestamps: false
+}, {
+  define: { 
+    freezeTableName: true 
+  }
+})
